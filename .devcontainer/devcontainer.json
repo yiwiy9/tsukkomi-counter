@@ -1,0 +1,40 @@
+{
+  "name": "${localWorkspaceFolderBasename}",
+
+  "build": { "dockerfile": "Dockerfile" },
+
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+  ],
+
+  "forwardPorts": [5173],
+
+  "postCreateCommand": "bun install",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "EditorConfig.EditorConfig",
+        "mosapride.zenkaku",
+        "christian-kohler.path-intellisense",
+        "mhutchie.git-graph",
+        "eamodio.gitlens",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "formulahendry.auto-rename-tag",
+        "formulahendry.auto-close-tag",
+        "dsznajder.es7-react-js-snippets",
+        "ecmel.vscode-html-css",
+        "xabikos.JavaScriptSnippets",
+      ],
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true,
+        },
+      },
+    },
+  },
+}
