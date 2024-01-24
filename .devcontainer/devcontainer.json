@@ -15,17 +15,11 @@
     "vscode": {
       "extensions": [
         "streetsidesoftware.code-spell-checker",
-        "EditorConfig.EditorConfig",
-        "mosapride.zenkaku",
-        "christian-kohler.path-intellisense",
         "mhutchie.git-graph",
         "eamodio.gitlens",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-        "formulahendry.auto-rename-tag",
-        "formulahendry.auto-close-tag",
         "dsznajder.es7-react-js-snippets",
-        "ecmel.vscode-html-css",
         "xabikos.JavaScriptSnippets",
       ],
       "settings": {
