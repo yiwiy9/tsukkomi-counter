@@ -28,15 +28,15 @@ const App: FC = () => {
   }
 
   return (
-    <div className="flex items-center text-xl font-bold text-white">
+    <div className="flex items-center bg-black text-9xl font-bold text-white">
       <input
-        className="w-10 appearance-none bg-transparent text-right caret-transparent focus:outline-none"
+        className="w-60 appearance-none bg-transparent text-right caret-transparent focus:outline-none"
         id="inline-full-name"
         value={count}
         onKeyDown={handleKeyDown}
         readOnly
       />
-      <label className="ml-1.5" htmlFor="inline-full-name">
+      <label className="ml-10" htmlFor="inline-full-name">
         ツッコミ
       </label>
     </div>

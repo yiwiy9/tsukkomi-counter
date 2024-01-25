@@ -4,12 +4,13 @@
   "build": { "dockerfile": "Dockerfile" },
 
   "mounts": [
+    "source=${localWorkspaceFolderBasename}-dist,target=${containerWorkspaceFolder}/dist,type=volume",
     "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
   ],
 
-  "forwardPorts": [5173],
+  "forwardPorts": [4173, 5173],
 
-  "postCreateCommand": "bun install",
+  "postCreateCommand": "bun run preview",
 
   "customizations": {
     "vscode": {
