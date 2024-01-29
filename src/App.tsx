@@ -22,21 +22,25 @@ const App: FC = () => {
 
   const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
     const key = e.code
-    if (key === 'Space') updateCount(count + 1)
+    if (key === 'Space' || key === 'KeyN') updateCount(count + 1)
+    else if (key === 'KeyB') updateCount(count + 10)
+    else if (key === 'KeyV') updateCount(count + 100)
     else if (key === 'KeyM') updateCount(count - 1)
+    else if (key === 'Comma') updateCount(count - 10)
+    else if (key === 'Period') updateCount(count - 100)
     else if (key === 'Escape') updateCount(0)
   }
 
   return (
     <div className="flex items-center text-9xl font-bold text-white">
       <input
-        className="w-60 appearance-none bg-transparent text-right caret-transparent focus:outline-none"
+        className="w-80 appearance-none bg-transparent text-right caret-transparent focus:outline-none"
         id="inline-full-name"
         value={count}
         onKeyDown={handleKeyDown}
         readOnly
       />
-      <label className="ml-10" htmlFor="inline-full-name">
+      <label className="ml-5" htmlFor="inline-full-name">
         ツッコミ
       </label>
     </div>
